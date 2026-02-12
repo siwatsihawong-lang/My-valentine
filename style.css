@@ -1,0 +1,66 @@
+body {
+    background-color: #ffeff5;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; margin: 0; font-family: 'Arial', sans-serif; overflow: hidden;
+}
+
+.container { text-align: center; z-index: 10; position: relative; }
+h1 { color: #d63384; font-size: 2.5rem; }
+.hidden { display: none !important; }
+
+.main-btn {
+    background-color: #ff4d6d; color: white; border: none;
+    padding: 15px 40px; border-radius: 30px; cursor: pointer;
+    font-size: 1.2rem; font-weight: bold; transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+}
+
+.secondary-btn {
+    background-color: #6c757d; color: white; border: none;
+    padding: 10px 25px; border-radius: 20px; cursor: pointer;
+    position: absolute; z-index: 20;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9); padding: 30px;
+    border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid #ffccd5; margin-bottom: 20px; }
+
+/* --- Galaxy Styles --- */
+#galaxy-screen {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+    overflow: hidden; z-index: 1000;
+}
+
+.floating-item { position: absolute; white-space: nowrap; }
+
+.float-text-style {
+    color: #ffb3c1; font-size: 1.4rem; font-weight: bold;
+    text-shadow: 0 0 12px rgba(255, 77, 109, 0.9);
+}
+
+.float-img-style {
+    width: 100px; height: 100px; object-fit: cover;
+    border-radius: 12px; border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.star { position: absolute; background: white; border-radius: 50%; animation: twinkle var(--duration) infinite; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes floatMovement {
+    from { transform: translate(0, 0); }
+    to { transform: translate(var(--x), var(--y)); }
+}
+
+#fireworksCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2000; }
+.heart-fall { position: absolute; color: #ff4d6d; pointer-events: none; z-index: 5; animation: falling linear forwards; }
+@keyframes falling { to { transform: translateY(100vh) rotate(360deg); opacity: 0; } }

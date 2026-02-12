@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special One ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <div id="setup-screen" class="container">
+        <h1>Happy Valentine's Day</h1>
+        <div class="heart-img">🌹</div>
+        <button id="playBtn" class="main-btn">พร้อมจะดูอะยางงง ❤️</button>
+    </div>
+
+    <div id="question-screen" class="container hidden">
+        <h2 id="question-text">เบบี้รักเราไหมมมม?</h2>
+        <div class="btn-group">
+            <button id="yesBtn" class="main-btn">รักสิ! 💖</button>
+            <button id="noBtn" class="secondary-btn">ไม่รัก 😢</button>
+        </div>
+    </div>
+
+    <div id="message-screen" class="container hidden">
+        <div class="card">
+            <img src="https://i.postimg.cc/Dy9DC5NR/IMG-4116.jpg" alt="รูปคู่" class="profile-pic" id="couple-img">
+            <h3 id="typewriter"></h3> 
+            <button id="finalYesBtn" class="main-btn hidden" style="margin-top: 20px;">My univers ✨</button>
+        </div>
+    </div>
+
+    <div id="galaxy-screen" class="hidden">
+        <div class="stars-container"></div>
+        <div id="floating-items-container"></div>
+    </div>
+
+    <div id="youtube-player"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
